@@ -2,7 +2,7 @@
 
 - GitHub Repository frontend : https://github.com/jbjzeehad/l2-assignment-4
 - GitHub Repository backend : https://github.com/jbjzeehad/l2-assignment-3
-- Live Deployment frontend: https://minimallibrarymanagementsystem-aclbrthff-jubayers-projects.vercel.app/
+- Live Deployment frontend: https://minimallibrarymanagementsystem.vercel.app/
 - Live Deployment backend: https://librarymanagementsystem-eosin.vercel.app/
 
 ## Features
