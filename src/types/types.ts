@@ -7,6 +7,7 @@ export type BookGenre =
   | "FANTASY";
 
 export interface IBook {
+  data: any;
   _id: string;
   title: string;
   author: string;
