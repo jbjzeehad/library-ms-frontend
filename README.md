@@ -1,70 +1,92 @@
-# React + TypeScript + Vite
+# Library Management System (Frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive frontend for a Library Management System built with React, TypeScript, Redux Toolkit, and Tailwind CSS. This application provides an intuitive interface for managing books, tracking borrows, and viewing library statistics.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Book Management**:
 
-## Expanding the ESLint configuration
+  - View all books with pagination and filtering
+  - Add new books to the library
+  - Edit existing book details
+  - Delete books from the system
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Borrow Management**:
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+  - Borrow books with quantity tracking
+  - View borrowed books summary
+  - Automatic availability updates
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **Responsive Design**:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+  - Fully responsive layout for all device sizes
+  - Mobile-friendly table/card views
+  - Accessible navigation
+
+- **Modern Tech Stack**:
+  - React 18 with TypeScript
+  - Redux Toolkit with RTK Query
+  - Tailwind CSS for styling
+  - React Router v6 for navigation
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/rakibul-wdp/minimal-library-management-system.git
+   cd minimal-library-management-system
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+## Project Structure
+
+```
+src/
+├── api/                  # RTK Query API endpoints
+├── components/           # Reusable UI components
+│   ├── books/            # Book-related components
+│   ├── layout/           # Layout components
+│   └── ui/               # General UI components
+├── pages/                # Page components
+├── routes/               # Application routes
+├── store/                # Redux store configuration
+├── types/                # TypeScript type definitions
+├── App.tsx               # Main application component
+└── main.tsx              # Application entry point
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Available Scripts
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- `npm run dev`: Start development server
+- `npm run build`: Build for production
+- `npm run lint`: Run ESLint
+- `npm run lint:fix`: Fix linting issues
+- `npm run preview`: Preview production build
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-# l2-assignment-4
+## Technologies Used
+
+- **Frontend Framework**: [React](https://reactjs.org/)
+- **State Management**: [Redux Toolkit](https://redux-toolkit.js.org/) with [RTK Query](https://redux-toolkit.js.org/rtk-query/overview)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Routing**: [React Router](https://reactrouter.com/)
+- **Type Checking**: [TypeScript](https://www.typescriptlang.org/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+
+## Backend Integration
+
+This frontend is designed to work with the [Library Management Backend API](https://library-management-api-gules.vercel.app/). Ensure the backend is running and properly configured before starting the frontend.
+
+## Contact
+
+`rakibul-wdp`
