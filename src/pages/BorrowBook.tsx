@@ -6,9 +6,9 @@ import Toast from "../components/ui/Toast";
 import { useToast } from "../hooks/useToast";
 
 export default function BorrowBook() {
-  const { id } = useParams<{ id: string }>();
+  const { bookId } = useParams<{ bookId: string }>();
   const navigate = useNavigate();
-  const { data: book, isLoading, isError } = useGetBookQuery(id || "");
+  const { data: book, isLoading, isError } = useGetBookQuery(bookId || "");
   const [borrowBook] = useBorrowBookMutation();
 
   console.log(book);
@@ -20,11 +20,11 @@ export default function BorrowBook() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!id || !dueDate) return;
+    if (!bookId || !dueDate) return;
 
     try {
       await borrowBook({
-        book: id,
+        book: bookId,
         quantity,
         dueDate: new Date(dueDate).toISOString(),
       }).unwrap();
@@ -42,7 +42,7 @@ export default function BorrowBook() {
   return (
     <div className="max-w-md mx-auto border my-3 p-2 rounded-md border-teal-500">
       <h1 className="text-2xl font-bold mb-6">
-        Borrow <span className="text-teal-700">{book?.data?.title}</span>
+        Borrow <span className="text-teal-700">{book.data.title}</span>
       </h1>
 
       {toast && (
