@@ -1,7 +1,7 @@
 # Minimal LMS
 
-- GitHub Repository frontend : https://github.com/jbjzeehad/l2-assignment-4
-- GitHub Repository backend : https://github.com/jbjzeehad/l2-assignment-3
+- GitHub Repository frontend : https://github.com/jbjzeehad/library-ms-frontend
+- GitHub Repository backend : https://github.com/jbjzeehad/library-ms-backend
 - Live Deployment frontend: https://minimallibrarymanagementsystem.vercel.app/
 - Live Deployment backend: https://librarymanagementsystem-eosin.vercel.app/
 
